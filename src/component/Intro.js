@@ -53,7 +53,7 @@ const Desc = styled.div``
 
 const RightContainer = styled.div`
 flex: 1;
-
+padding-top: 50px;
 `
 const Image = styled.img`
 width: 90%;

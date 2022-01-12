@@ -17,10 +17,10 @@ font-weight: 600;
 `
 
 const BottomContainer = styled.div`
+width: 100%;
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
-width: 100%;
 `
 
 export default function Project() {
