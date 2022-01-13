@@ -1,26 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-import myImage from '../images/ihsaan.jpeg'
+import myImage from '../images/MohammedIhsaan.jpeg'
 import reactImg from '../images/reactjs.png'
 import javaScriptImg from '../images/JavaScript-logo.png'
 import htmlImg from '../images/html.png'
 import cssImg from '../images/css3.png'
 import reduxImg from '../images/redux.png'
 import bootstrapImg from '../images/bootstrap.png'
+import { mobile } from '../reponsive'
 
 const Container = styled.div`
 display: flex;
 height: 100vh;
-/* align-items: center;
-justify-content: space-between; */
+${mobile({flexDirection:'column',marginTop:'300px'})}
 `
 const LeftContainer = styled.div`
 flex: 1;
 display: flex;
-height: 100%;
+/* height: 100%; */
 align-items: center;
 justify-content: center;
-/* position: absolute; */
+${mobile({paddingLeft:'40px'})}
 
 `
 
@@ -30,9 +30,16 @@ height: 70vh;
 border-radius: 30px;
 position: relative;
 overflow: hidden;
-background-color: ${props=>props.type==='back' ? '#333':'white'};
-top: ${props=>props.type==='back' ? '-50px':'0'};
-left: ${props=>props.type==='back' ? '100px':'-100px'};
+background-color: ${props=>props.type==='back' ? '#59b256':'white'};
+top: ${props=>props.type==='back' ? '-40px':'0'};
+left: ${props=>props.type==='back' ? '100px':'-150px'};
+${mobile({
+    // width:'200px',
+    height:'40vh',
+    left : props=>props.type==='back' ? '20px':'-60px',
+    
+    })}
+
 `
 const Image = styled.img`
 width: 100%;
@@ -54,14 +61,22 @@ text-align: center;
 `
 const Desc1 = styled.p`
 margin: 10px 0px;
+${mobile({margin:'10px 20px'})}
 `
 const Desc = styled.p`
 font-weight: 300 ;
+${mobile({margin:'10px 20px'})}
 `
 
 const Skills = styled.div`
 padding-top: 40px;
 display: flex;
+${mobile({flexDirection:'column',alignItem:'center'})}
+`
+const SkillSet = styled.div`
+display: flex;
+${mobile({paddingBottom:'30px',paddingLeft:'40px'})}
+
 `
 
 const Icon = styled.img` 
@@ -93,12 +108,16 @@ export default function About() {
                       I'm also learning Back-End Development and looking forward to be a Full Stack Web Developer.
               </Desc>
              <Skills>
+                 <SkillSet>
                  <Icon src={reactImg} ></Icon>
                  <Icon src={javaScriptImg} ></Icon>
                  <Icon src={reduxImg} ></Icon>
+                 </SkillSet>
+                 <SkillSet>
                  <Icon src={htmlImg} ></Icon>
                  <Icon src={cssImg} ></Icon>
                  <Icon src={bootstrapImg} ></Icon>
+                 </SkillSet>
              </Skills>
             </RightContainer>
         </Container>

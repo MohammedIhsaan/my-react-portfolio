@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import styled from 'styled-components'
 import { Link } from "react-scroll"
-import { toggleIcon } from '../reponsive'
+import { mobile, toggleIcon } from '../reponsive'
 import {Menu } from '@material-ui/icons';
 
 
@@ -18,10 +18,14 @@ padding: 10px 10px;
 position: fixed;
 width: 100%;
 z-index: 4;
+${mobile({height:'20px',paddingLeft:'0px'})}
+
 `
 
 const Logo = styled.div`
 font-weight: 500;
+${mobile({paddingLeft:'10px'})}
+
 `
 
 const Menus = styled.div`
@@ -34,11 +38,11 @@ padding-right: 20px;
     flex-direction: column;
     overflow: hidden;
     width: 100%;
-    max-height: ${({isOpen})=>isOpen? "300px": "0"};
+    max-height: ${({isOpen})=>isOpen? "300px": "0px"};
     transition: max-height 1s ease-in-out;
-    padding: 10px;
+    /* padding: 10px; */
+    background-color:#24292f;
 }
-
 `
 const MenuItem = styled.div`
 font-size: 15px;
@@ -46,9 +50,8 @@ font-weight: 500;
 cursor: pointer;
 margin-left: 25px;
 
-@media (max-width:680px){
-    padding: 5px;
-}
+${mobile({padding:'5px',paddingLeft:'0px'})}
+
 
 &:hover{
     opacity: 0.8;
@@ -57,7 +60,7 @@ margin-left: 25px;
 `
 const Toggle = styled.span`
 display: none;
-${toggleIcon({display:'flex'})}
+${mobile({display:'flex'})}
 color: white;
 background: #24292f;
 padding-right: 20px;

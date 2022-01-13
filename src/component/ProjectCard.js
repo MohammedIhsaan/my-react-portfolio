@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../reponsive'
 
 const Container = styled.div`
 width: 30%;
+${mobile({width:'100%',paddingTop:'20px',paddingLeft:'10px'})}
 
 `
 const TopContainer = styled.div``
@@ -37,7 +39,6 @@ const Project = styled.a``
 const Image = styled.img`
 z-index: 2;
 width: 100%;
-height: 100%;
 object-fit: cover;
 transition: all 10s ease;
 :hover{

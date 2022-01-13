@@ -1,10 +1,12 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
-import myImage from '../images/ihsaan.jpeg'
+import myImage from '../images/ihsaan1.png'
+import { mobile } from '../reponsive'
 
 const Container = styled.div`
 display: flex;
 height: 100vh;
+${mobile({flexDirection:'column'})}
 
 `
 const LeftContainer = styled.div`
@@ -19,6 +21,8 @@ padding: 50px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+${mobile({padding:'10px',paddingTop:'50px',textAlign:'center'})}
+
 `
 const Introduction = styled.h2`
 font-size: 30px;
@@ -30,6 +34,7 @@ font-size: 50px;
 const JobTitle = styled.div`
 height: 50px;
 overflow: hidden;
+
 `
 const move = keyframes`
  100%{
@@ -39,6 +44,8 @@ const move = keyframes`
 const TitleWrapper = styled.div`
 height: 100%;
 animation: ${move} 5s ease-in-out infinite alternate ;
+${mobile({paddingLeft:'45px'})}
+
 `
 
 const Title = styled.div`
@@ -48,16 +55,20 @@ height: 50px;
 font-size: 30px;
 font-weight: bold;
 color: #59b256;
+
 `
 const Desc = styled.div``
 
 const RightContainer = styled.div`
 flex: 1;
 padding-top: 50px;
+${mobile({paddingTop:'15px'})}
+
 `
 const Image = styled.img`
-width: 90%;
+width: 100%;
 height: 100%;
+${mobile({width:'100%'})}
 
 
 `
