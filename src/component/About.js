@@ -12,7 +12,7 @@ import { mobile } from '../reponsive'
 const Container = styled.div`
 display: flex;
 height: 100vh;
-${mobile({flexDirection:'column',marginTop:'300px'})}
+${mobile({flexDirection:'column',marginTop:'70px'})}
 `
 const LeftContainer = styled.div`
 flex: 1;
@@ -20,8 +20,7 @@ display: flex;
 /* height: 100%; */
 align-items: center;
 justify-content: center;
-${mobile({paddingLeft:'40px'})}
-
+${mobile({display:'none'})}
 `
 
 const Card = styled.div`
@@ -32,9 +31,9 @@ position: relative;
 overflow: hidden;
 background-color: ${props=>props.type==='back' ? '#59b256':'white'};
 top: ${props=>props.type==='back' ? '-40px':'0'};
-left: ${props=>props.type==='back' ? '100px':'-150px'};
+left: ${props=>props.type==='back' ? '100px':'-100px'};
 ${mobile({
-    // width:'200px',
+    // width:'90%',
     height:'40vh',
     left : props=>props.type==='back' ? '20px':'-60px',
     
@@ -54,6 +53,8 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 padding-right: 40px;
+${mobile({paddingRight:'0px'})}
+
 `
 const Title = styled.h1`
 font-weight: 400;
@@ -61,34 +62,49 @@ text-align: center;
 `
 const Desc1 = styled.p`
 margin: 10px 0px;
-${mobile({margin:'10px 20px'})}
+${mobile({margin:'15px'})}
 `
 const Desc = styled.p`
 font-weight: 300 ;
-${mobile({margin:'10px 20px'})}
+${mobile({margin:'15px'})}
 `
 
 const Skills = styled.div`
 padding-top: 40px;
 display: flex;
-${mobile({flexDirection:'column',alignItem:'center'})}
+flex-direction: column;
+`
+const Wrapper = styled.div`
+display: flex;
 `
 const SkillSet = styled.div`
 display: flex;
-${mobile({paddingBottom:'30px',paddingLeft:'40px'})}
+${mobile({
+    paddingBottom:'30px',
+    flexDirection:'column',
+    paddingRight : (props)=>props.type==='right' ? '0px':'25px',
+    paddingLeft : (props)=>props.type==='right' ? '25px':'0px'
+    })}
 
 `
+const Wrap = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+const IconTitle = styled.div``
 
 const Icon = styled.img` 
-width: 120px;
-height: 120px;
+width: 110px;
+height: 110px;
+padding: 10px;
 `
 
 
 
 export default function About() {
     return (
-        <Container>
+        <Container className='about'>
             <LeftContainer>
                 <Card type='back'></Card>
                 <Card >
@@ -98,26 +114,51 @@ export default function About() {
             <RightContainer>
               <Title>About Me</Title>
               <Desc1>
-                      I have compelted my Post Graduation in Structural Engineering(CIVIL).
+                        Hi, I am Mohammed Ihsaan. Motivated web developer , Passionate about building first-class web applications.
+                        I have compelted my Post Graduation in Structural Engineering(CIVIL).
                       I have developed a keen interest for Web Development. 
                       I have completed some React.js projects, You can check in My Work section.
               </Desc1>
               <Desc>
                       My expertise are in React.js, Redux ,JavaScript, HTML5, CSS3, Bootstrap, Material UI, 
-                      and also working as freelancer web developer. 
-                      I'm also learning Back-End Development and looking forward to be a Full Stack Web Developer.
+                      and I'm also learning Back-End Development and looking forward to be a Full Stack Web Developer.
               </Desc>
              <Skills>
+              <Title style={{paddingBottom:'15px'}}>SKILLS</Title>
+              <Wrapper>
+
                  <SkillSet>
-                 <Icon src={reactImg} ></Icon>
+                     <Wrap>
+                         <IconTitle>REACT.JS</IconTitle>
+                        <Icon src={reactImg} ></Icon>
+                     </Wrap>
+                     <Wrap>
+                     <IconTitle>JAVASCRIPT</IconTitle>
                  <Icon src={javaScriptImg} ></Icon>
+                     </Wrap>
+                     <Wrap>
+                     <IconTitle>REDUX</IconTitle>
                  <Icon src={reduxImg} ></Icon>
+                     </Wrap>
                  </SkillSet>
-                 <SkillSet>
+                 <SkillSet type='right'>
+                     <Wrap>
+                     <IconTitle>HTML5</IconTitle>
+
                  <Icon src={htmlImg} ></Icon>
+                     </Wrap>
+                     <Wrap>
+                     <IconTitle>CSS3</IconTitle>
+
                  <Icon src={cssImg} ></Icon>
+                     </Wrap>
+                     <Wrap>
+                     <IconTitle>BOOTSTRAP</IconTitle>
+
                  <Icon src={bootstrapImg} ></Icon>
+                     </Wrap>
                  </SkillSet>
+              </Wrapper>
              </Skills>
             </RightContainer>
         </Container>

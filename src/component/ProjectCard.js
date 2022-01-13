@@ -17,7 +17,7 @@ const BottomContainer = styled.div`
 width: 90%;
 height: 40vh;
 margin: 20px 10px;
-border: 2px solid rgb(243,242,242);
+border: 2px solid #24292f;
 border-radius: 10px 10px 0px 0px;
 overflow: hidden;
 `
@@ -26,7 +26,7 @@ z-index: 1;
 height: 20px;
 display: flex;
 align-items: center;
-background-color: rgb(243,242,242);
+background-color: #24292f;
 `
 const Circle = styled.div`
 width: 6px;

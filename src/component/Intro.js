@@ -2,6 +2,7 @@ import React from 'react'
 import styled, {keyframes} from 'styled-components'
 import myImage from '../images/ihsaan1.png'
 import { mobile } from '../reponsive'
+import {GitHub ,LinkedIn,Twitter} from '@material-ui/icons';
 
 const Container = styled.div`
 display: flex;
@@ -15,10 +16,13 @@ display: flex;
 height: 100vh;
 align-items: center;
 justify-content: center;
+${mobile({marginTop:'50px'})}
+
 `
 const Wrapper =styled.div`
 padding: 50px;
 display: flex;
+align-items: center;
 flex-direction: column;
 justify-content: space-between;
 ${mobile({padding:'10px',paddingTop:'50px',textAlign:'center'})}
@@ -30,11 +34,11 @@ font-weight: 300;
 `
 const MyName = styled.h1`
 font-size: 50px;
+padding-bottom: 25px;
 `
 const JobTitle = styled.div`
 height: 50px;
 overflow: hidden;
-
 `
 const move = keyframes`
  100%{
@@ -44,8 +48,10 @@ const move = keyframes`
 const TitleWrapper = styled.div`
 height: 100%;
 animation: ${move} 5s ease-in-out infinite alternate ;
-${mobile({paddingLeft:'45px'})}
-
+${mobile({paddingLeft:'15px'})}
+display: flex;
+flex-direction: column;
+align-items: center;
 `
 
 const Title = styled.div`
@@ -57,7 +63,35 @@ font-weight: bold;
 color: #59b256;
 
 `
-const Desc = styled.div``
+const Desc = styled.div`
+padding-top: 20px;
+text-align: center;
+`
+
+const IconWrapper = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+/* width: 40%; */
+padding-top: 40px;
+/* ${mobile({marginRight:'20px'})} */
+
+`
+
+const Icon = styled.a`
+border: 1px solid #59b256;
+padding: 5px;
+margin-right: 20px;
+border-radius: 10px;
+cursor: pointer;
+color: inherit;
+${mobile({margin:'10px'})}
+
+:hover{
+    background-color: #59b256;
+}
+`
+
 
 const RightContainer = styled.div`
 flex: 1;
@@ -69,13 +103,11 @@ const Image = styled.img`
 width: 100%;
 height: 100%;
 ${mobile({width:'100%'})}
-
-
 `
 
 export default function Intro() {
     return (
-        <Container>
+        <Container className='intro'>
             <LeftContainer>
                 <Wrapper>
 
@@ -87,12 +119,15 @@ export default function Intro() {
                     <Title>React JS Developer</Title>                   
                     </TitleWrapper>
                 </JobTitle>
-                <Desc>Motivated web developer , Passionate about building first-class web applications.
-                     I have compelted my Post Graduation in Structural Engineering(CIVIL).
-                      I have developed a keen interest for Web Development. 
-                      I have completed some React.js projects, You can check in My Work section. 
-                      My expertise are in React.js, Redux ,JavaScript, HTML5, CSS3, Bootstrap, Material UI, and also working as freelancer web developer. 
-                      I'm also learning Back-End Development and looking forward to be a Full Stack Web Developer.</Desc>
+                <IconWrapper>
+                    <Icon href='https://github.com/MohammedIhsaan' target='_blank'>
+                      <GitHub style={{fontSize:'40px'}}/>
+                    </Icon>
+                    <Icon href='https://www.linkedin.com/in/mohammed-ihsaan-haque-895732222/'><LinkedIn style={{fontSize:'40px'}}/></Icon>
+                    <Icon href='https://twitter.com/ihsaanul_haque' target='_blank'>
+                    <Twitter style={{fontSize:'40px'}}/>
+                    </Icon>
+                </IconWrapper>
                 </Wrapper>
             </LeftContainer>
             <RightContainer>

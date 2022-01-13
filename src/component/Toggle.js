@@ -4,12 +4,14 @@ import Sun from '../images/sun.png'
 import Moon from '../images/moon.png'
 import {ThemeContext} from '../context'
 import { mobile } from '../reponsive'
+import {NightsStay ,Brightness4 } from '@material-ui/icons';
+
 
 const Container = styled.div`
 width: 50px;
 height: 25px;
 border-radius: 20px;
-border: 1px solid #999;
+border: 1px solid #24292f;
 background-color: white;
 position: fixed;
 top: 60px;
@@ -17,7 +19,7 @@ right:10px;
 z-index:999;
 display: flex;
 align-items: center;
-justify-content: space-between;
+justify-content: space-around;
 /* ${mobile({right:'100px'})} */
 
 `
@@ -25,11 +27,10 @@ const Image = styled.img`
 width: 22px;
 height: 22px;
 cursor: pointer;
-
 `
 const Button = styled.div`
-width: 25px;
-height: 25px;
+width: 23px;
+height: 23px;
 border-radius: 50%;
 background-color: #999;
 position: absolute;
@@ -43,8 +44,8 @@ export default function Toggle() {
     }
     return (
         <Container>
-           <Image onClick={handelClick} style={{width:'15px',height:'15px',paddingRight:'2px'}} src={Moon}/>
-           <Image onClick={handelClick} src={Sun}/>
+           <NightsStay onClick={handelClick}  style={{fontSize:'20px',color:'#24292f',cursor:'pointer'}}/>
+           <Brightness4 onClick={handelClick}  style={{fontSize:'20px',color:'#24292f',cursor:'pointer'}}/>
            <Button  style={{left:theme.state.darkMode? 0 : 25}}></Button>
         </Container>
     )

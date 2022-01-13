@@ -31,13 +31,13 @@ ${mobile({flexDirection:'column'})}
 
 export default function Project() {
     return (
-        <Container>
+        <Container className='project'>
             <TopContainer>
                 <Title>My Projects</Title>
             </TopContainer>
             <BottomContainer>
                 {
-                    projectData.map(item=> <ProjectCard data={item}/>)
+                    projectData.map((item,i)=> <ProjectCard key={i} data={item}/>)
                 }
                
                 

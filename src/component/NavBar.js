@@ -77,8 +77,7 @@ export default function NavBar() {
                 </Toggle>         
                 <Menus isOpen={isOpen}>
                   <MenuItem ><Link to='intro' onClick={()=>setIsOpen(!isOpen)}>HOME</Link>  </MenuItem>
-                  <MenuItem ><Link to='intro' onClick={()=>setIsOpen(!isOpen)}>ABOUT</Link> </MenuItem>
-                  <MenuItem ><Link to='newSkill' onClick={()=>setIsOpen(!isOpen)}>SKILLS</Link> </MenuItem>
+                  <MenuItem ><Link to='about' onClick={()=>setIsOpen(!isOpen)}>ABOUT</Link> </MenuItem>
                   <MenuItem ><Link to='project' onClick={()=>setIsOpen(!isOpen)}>MY PROJECT</Link> </MenuItem>
                 </Menus>         
                 
