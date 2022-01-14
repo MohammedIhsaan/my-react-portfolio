@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import styled from 'styled-components'
 import { Link } from "react-scroll"
-import { mobile, toggleIcon } from '../reponsive'
+import { mobile} from '../reponsive'
 import {Menu } from '@material-ui/icons';
 
 

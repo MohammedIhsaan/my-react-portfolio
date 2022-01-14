@@ -1,7 +1,5 @@
 import React ,{useContext} from 'react'
 import styled from 'styled-components'
-import Sun from '../images/sun.png'
-import Moon from '../images/moon.png'
 import {ThemeContext} from '../context'
 import { mobile } from '../reponsive'
 import {NightsStay ,Brightness4 } from '@material-ui/icons';
@@ -22,11 +20,6 @@ align-items: center;
 justify-content: space-around;
 /* ${mobile({right:'100px'})} */
 
-`
-const Image = styled.img`
-width: 22px;
-height: 22px;
-cursor: pointer;
 `
 const Button = styled.div`
 width: 23px;

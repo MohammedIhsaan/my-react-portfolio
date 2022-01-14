@@ -63,10 +63,6 @@ font-weight: bold;
 color: #59b256;
 
 `
-const Desc = styled.div`
-padding-top: 20px;
-text-align: center;
-`
 
 const IconWrapper = styled.div`
 display: flex;
