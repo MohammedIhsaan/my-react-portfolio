@@ -7,6 +7,7 @@ import htmlImg from '../images/html.png'
 import cssImg from '../images/css3.png'
 import reduxImg from '../images/redux.png'
 import bootstrapImg from '../images/bootstrap.png'
+import styledComponent from '../images/styledComponent.jpg'
 import { mobile } from '../reponsive'
 
 const Container = styled.div`
@@ -59,10 +60,15 @@ ${mobile({paddingRight:'0px'})}
 const Title = styled.h1`
 font-weight: 400;
 text-align: center;
+${mobile({display:'none'})}
+`
+const SkillTitle = styled.h1`
+font-weight: 400;
+text-align: center;
 `
 const Desc1 = styled.p`
 margin: 10px 0px;
-${mobile({margin:'15px'})}
+${mobile({margin:'15px',paddingTop:'20px'})}
 `
 const Desc = styled.p`
 font-weight: 300 ;
@@ -124,7 +130,7 @@ export default function About() {
                       and I'm also learning Back-End Development and looking forward to be a Full Stack Web Developer.
               </Desc>
              <Skills>
-              <Title style={{paddingBottom:'15px'}}>SKILLS</Title>
+              <SkillTitle style={{paddingBottom:'15px'}}>SKILLS</SkillTitle>
               <Wrapper>
 
                  <SkillSet>
@@ -139,6 +145,10 @@ export default function About() {
                      <Wrap>
                      <IconTitle>REDUX</IconTitle>
                  <Icon src={reduxImg} ></Icon>
+                     </Wrap>
+                     <Wrap>
+                     <IconTitle>STYLED-COMPONENT</IconTitle>
+                 <Icon src={styledComponent} ></Icon>
                      </Wrap>
                  </SkillSet>
                  <SkillSet type='right'>
