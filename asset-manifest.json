@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.js": "/my-react-portfolio/static/js/main.04b43560.js",
+    "main.js": "/my-react-portfolio/static/js/main.1f506452.js",
     "static/media/e.png": "/my-react-portfolio/static/media/e.0b01dc12071b763dc63b.png",
+    "static/media/MyPortfolio.png": "/my-react-portfolio/static/media/MyPortfolio.ce1ad1c1d9aed720c33e.png",
     "static/media/ihsaan1.png": "/my-react-portfolio/static/media/ihsaan1.e012b8d4bc74aa84a94e.png",
     "static/media/bootstrap.png": "/my-react-portfolio/static/media/bootstrap.0b914c5ec6c1ef5be9a4.png",
     "static/media/MohammedIhsaan.jpeg": "/my-react-portfolio/static/media/MohammedIhsaan.f1e971db6dad01223ccb.jpeg",
     "static/media/css3.png": "/my-react-portfolio/static/media/css3.9914c56c0e646c8a25c1.png",
     "static/media/html.png": "/my-react-portfolio/static/media/html.b82dbe113ddce4b9a159.png",
     "static/media/online-shopping.jpg": "/my-react-portfolio/static/media/online-shopping.0f6d3e936c2942568491.jpg",
+    "static/media/youtube-clone-app.png": "/my-react-portfolio/static/media/youtube-clone-app.733de2c96442134d1b5b.png",
     "static/media/birthday.png": "/my-react-portfolio/static/media/birthday.513e756d22039c00ca8e.png",
     "static/media/reactjs.png": "/my-react-portfolio/static/media/reactjs.f3e576ba08e6be927148.png",
     "static/media/JavaScript-logo.png": "/my-react-portfolio/static/media/JavaScript-logo.28c6104046563cc93029.png",
     "static/media/redux.png": "/my-react-portfolio/static/media/redux.b3b939c66aecf7d53967.png",
     "index.html": "/my-react-portfolio/index.html",
-    "main.04b43560.js.map": "/my-react-portfolio/static/js/main.04b43560.js.map"
+    "main.1f506452.js.map": "/my-react-portfolio/static/js/main.1f506452.js.map"
   },
   "entrypoints": [
-    "static/js/main.04b43560.js"
+    "static/js/main.1f506452.js"
   ]
 }
