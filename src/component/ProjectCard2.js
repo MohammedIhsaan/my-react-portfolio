@@ -38,14 +38,12 @@ const Project = styled.a``;
 const Image = styled.img`
   z-index: 2;
   width: 100%;
+  height: 100%;
   /* object-fit: contain; */
-  transition: all 10s ease;
-  :hover {
-    transform: translateY(-30%);
-  }
+  object-fit: cover;
 `;
 
-export default function ProjectCard({ data }) {
+export default function ProjectCard2({ data }) {
   return (
     <Container key={data.id}>
       <TopContainer>
